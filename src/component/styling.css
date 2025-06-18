@@ -1,0 +1,325 @@
+/* MinesGame.css */
+
+/* Main container */
+.mines-game {
+    min-height: 100vh;
+    background-color: #111827;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .mines-game-container {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #facc15, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .subtitle {
+    color: #9ca3af;
+  }
+  
+  /* Grid layout */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .main-grid {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
+  /* Controls section */
+  .controls-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Card styles */
+  .card {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form elements */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    display: block;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .input-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #9ca3af;
+  }
+  
+  .input {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    color: white;
+  }
+  
+  .input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .select {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    color: white;
+  }
+  
+  .select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Stats section */
+  .stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stat-label {
+    color: #9ca3af;
+  }
+  
+  .stat-value {
+    font-weight: 600;
+  }
+  
+  .stat-value.green {
+    color: #4ade80;
+  }
+  
+  .stat-value.yellow {
+    color: #facc15;
+  }
+  
+  /* Buttons */
+  .button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.15s ease-in-out;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .button-green {
+    background-color: #059669;
+  }
+  
+  .button-green:hover {
+    background-color: #047857;
+  }
+  
+  .button-yellow {
+    background-color: #d97706;
+  }
+  
+  .button-yellow:hover {
+    background-color: #b45309;
+  }
+  
+  .button-blue {
+    background-color: #2563eb;
+  }
+  
+  .button-blue:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  /* Action buttons container */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Status messages */
+  .status-message {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .status-message.success {
+    background-color: #065f46;
+    border: 1px solid #059669;
+  }
+  
+  .status-message.error {
+    background-color: #7f1d1d;
+    border: 1px solid #dc2626;
+  }
+  
+  .status-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status-title.success {
+    color: #4ade80;
+  }
+  
+  .status-title.error {
+    color: #f87171;
+  }
+  
+  .status-text {
+    margin-bottom: 0.25rem;
+  }
+  
+  .status-text.success {
+    color: #86efac;
+  }
+  
+  .status-text.success-light {
+    color: #bbf7d0;
+  }
+  
+  .status-text.error {
+    color: #fca5a5;
+  }
+  
+  .status-text.error-light {
+    color: #fecaca;
+  }
+  
+  /* Game grid section */
+  .game-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .grid-cell {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    background: none;
+    color: inherit;
+  }
+  
+  .grid-cell.hidden {
+    background-color: #374151;
+  }
+  
+  .grid-cell.hidden:hover {
+    background-color: #4b5563;
+  }
+  
+  .grid-cell.mine {
+    background-color: #dc2626;
+  }
+  
+  .grid-cell.gem {
+    background-color: #059669;
+  }
+  
+  .grid-cell:disabled {
+    cursor: not-allowed;
+  }
+  
+  .cell-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .cell-icon.bomb {
+    color: #ef4444;
+  }
+  
+  .cell-icon.gem {
+    color: #4ade80;
+  }
+  
+  /* Game instructions */
+  .game-instructions {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #9ca3af;
+  }
